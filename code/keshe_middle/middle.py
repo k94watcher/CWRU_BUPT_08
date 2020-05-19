@@ -38,9 +38,9 @@ logging.basicConfig(level=logging.DEBUG,
 class DataBase:
     def __init__(self, db_name):
         # 设置登录IP，密码，数据库ip，数据库名
-        usr = 'root'
-        passwd = 'root'
-        ip = '127.0.0.1'
+        usr = 'xxxxxxxx'
+        passwd = 'xxxxxxxx'
+        ip = 'xxx.xxx.xxx.xxx'
         # 建立连接
         self.db = MongoClient('mongodb://%s:%s@%s' % (usr, passwd, ip))[db_name]
         self.fs = gridfs.GridFS(self.db)
