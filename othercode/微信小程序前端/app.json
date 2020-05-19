@@ -1,0 +1,35 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "images",
+    "pages/Event/Event",
+    "pages/jizu/jizu"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#a9b7b7",
+    "selectedColor": "#11cd6e",
+    "borderStyle": "white",
+    "list": [
+      {
+        "selectedIconPath": "images/首页_填充.png",
+        "iconPath": "images/2.png",
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "images/修改_填充.png",
+        "iconPath": "images/3.png",
+        "pagePath": "pages/jizu/jizu",
+        "text": "机组"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}
