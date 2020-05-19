@@ -37,13 +37,14 @@ class dataset_provider:
         self.url_save = url_save
         self.db_save = db_save
 
+    # 通过phm平台获取数据
     def get_dataset_from_phm_platform(self):
         url = 'https://api.phmlearn.com/component/data/zhoucheng'
         headers = {'Content-Type': 'application/x-www-form-urlencoded'}
-        id_list = [100, 108, 121, 133, 147, 160, 172, 188, 200, 212, 225, 237, 249, 261]
+        id_list = [100, 108, 121, 133, 147, 160, 172, 188, 200, 212, 225, 237, 249, 261] # 数据集编号
         atrribute_list = ['DE_time', 'FE_time', 'RPM']
         request_dict = {}
-        request_dict['access_token'] = 'deebf4a5da7a43b8a3571626a02fb35d.dc5ce3e596e9c3593a630c28ecd11a6c'
+        request_dict['access_token'] = 'xxxxxxxx'
         for id in id_list:
             dict_ = {}
             length = 0  # 记录总长度
@@ -125,7 +126,7 @@ class dataset_provider:
 
 def main():
     # 定义服务器ip地址和端口号
-    ip = '47.108.65.135'
+    ip = 'xxx.xxx.xxx.xxx'
     port = '5000'
 
     url_delete = 'http://%s:%s/keshe_middle_platform/api/v1/delete' % (ip, port)
