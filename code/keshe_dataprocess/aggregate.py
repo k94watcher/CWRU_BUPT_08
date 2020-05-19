@@ -186,8 +186,8 @@ def main():
     port = '5000'
 
     url_delete = 'http://%s:%s/keshe_middle_platform/api/v1/delete' % (ip, port)
-    url_load = 'http://47.108.65.135:5000/keshe_middle_platform/api/v1/load'
-    url_save = 'http://47.108.65.135:5000/keshe_middle_platform/api/v1/save'
+    url_load = 'http://%s:%s/keshe_middle_platform/api/v1/load' % (ip, port)
+    url_save = 'http://%s:%s/keshe_middle_platform/api/v1/save' % (ip, port)
     db_load = 'keshe_featureset'
     db_save = 'keshe_featureset_aggregate'
     app = LocalApi(url_delete, url_load, url_save, db_load, db_save)
