@@ -561,8 +561,8 @@ class ApiForward:
 
 
 def main():
-    url_load = 'http://47.108.65.135:5000/keshe_middle_platform/api/v1/load'
-    url_save = 'http://47.108.65.135:5000/keshe_middle_platform/api/v1/save'
+    url_load = 'http://xxx.xxx.xxx.xxx:5000/keshe_middle_platform/api/v1/load'
+    url_save = 'http://xxx.xxx.xxx.xxx:5000/keshe_middle_platform/api/v1/save'
     app = ApiForward(url_load, url_save)
     app.run()
 
