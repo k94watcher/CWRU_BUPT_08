@@ -216,7 +216,7 @@ class LocalApi:
 
 def main():
     #定义服务器ip地址和端口号
-    ip = '47.108.65.135'
+    ip = 'xxx.xxx.xxx.xxx'
     port = '5000'
 
     #定义窗的大小
