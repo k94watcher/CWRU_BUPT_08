@@ -1,0 +1,80 @@
+<!--logs.wxml-->
+<view class="container">
+  <view class='text6'>机组信息</view>
+  <view class="divLine1"></view>
+  <view class='name'>设备{{hao}}</view>
+  <view class='condition' wx:if="{{type111==='0'}}">正常</view>
+  <view class='condition' wx:if="{{type111==='1'}}">疑似ball故障</view>
+  <view class='condition' wx:if="{{type111==='2'}}">疑似outer race故障</view>
+  <view class='condition' wx:if="{{type111==='3'}}">疑似inner race故障</view>
+  <view class="divLine2"></view>
+  <view class='text1'>监测数据</view>
+  <view class="divLine3"></view>
+  <!-- <canvas
+ style="width: 400px; height: 500px;"
+ canvas-id="yueEle"
+ binderror="canvasIdErrorCallback"
+ bindtouchstart="yueTouchHandler1"
+  ></canvas> -->
+
+  <ec-canvas 
+  style='width: 400px; height: 400px;'
+  id="mychart-dom-scatter" 
+  canvas-id="mychart-scatter" 
+  ec="{{ ec }}" 
+  force-use-old-canvas="true"
+  ></ec-canvas>
+
+  <view class="divLine4"></view>
+  <view class='text2'>特征数据</view>
+  <view class="divLine5"></view>
+  <!-- <view class='featuredata1'>最大值：{{featuremax}}</view>
+  <view class='featuredata2'>最小值：{{featuremin}}</view>
+ 
+  <view class="divLine8"></view> -->
+
+
+
+
+<view class='history-table-wrap'>
+    <view class="table">
+      <view class="tr">
+          <view class="th th4">特征</view>
+          <view class="th th5">数据</view>
+          <!-- <view class="th th3">ball</view> -->
+      </view>
+      <view class="tr" wx:for="{{feature_columns}}" wx:for-index="index">
+          <view class="td td1">{{feature_columns[index]}}</view>
+          <view class="td td2">{{feature_data[0][index]}}</view>
+          <!-- <view class="td td3" wx:if="{{data11[index][3]===1}}">ball</view>
+          <view class="td td3" wx:if="{{data11[index][3]===2}}">outer race</view>
+          <view class="td td3" wx:if="{{data11[index][3]===3}}">inner race</view>
+          <view class="td td4"  bindtap='gotoEventPage' data-index="{{index}}">详情</view> -->
+      </view>
+    </view>
+</view>
+
+  
+  <!-- <view class="divLine4"></view>
+  <view class='text2'>特征数据</view>
+  <view class="divLine5"></view>
+  <view class='featuredata1'>最大值：{{featuremax}}</view>
+  <view class='featuredata2'>最小值：{{featuremin}}</view> -->
+
+  <!-- <canvas
+ style="width: 400px; height: 500px;"
+ canvas-id="yueEle3"
+ binderror="canvasIdErrorCallback"
+ bindtouchstart="yueTouchHandler3"
+  ></canvas> -->
+  
+  <view class="divLine6"></view>
+  <view class='text3'>历史数据下载</view>
+  <view class="divLine7"></view>
+  <view class="text5">点击链接即可复制，打开浏览器粘贴即可下载数据</view>
+  <view class='datadownload1'>所有监控数据下载</view>
+  <view class='text4' bindtap="textPaste1">http://47.108.65.135:5100/keshe/api/v1/machine/history/origin_data?machine_seq={{hao}}</view>
+  <view class='datadownload2' >所有特征数据下载</view>
+  <view class='text4' bindtap="textPaste2">http://47.108.65.135:5100/keshe/api/v1/machine/history/feature_data?machine_seq={{hao}}</view>
+ 
+</view>

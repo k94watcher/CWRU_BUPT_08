@@ -1,0 +1,78 @@
+<!--pages/test/test.wxml-->
+<view class='container'>
+<!-- <view class='title'>事件信息</view> -->
+<view class='text6'>事件信息</view>
+<view class="divLine1"></view>
+<view class='history-table-wrap'>
+    <view class="table">
+      <view class="tr">
+          <view class="th th1">设备号{{hao11}}</view>
+          <view class="th th2">{{time11}}</view>
+          <view class="th th3" wx:if="{{type11==='1'}}">ball</view>
+          <view class="th th3" wx:if="{{type11==='2'}}">outer race</view>
+          <view class="th th3" wx:if="{{type11==='3'}}">inner race</view>
+          <!-- <view class="td td3" wx:if="{{data11[index][3]===1}}">ball</view> -->
+      </view>
+    </view>
+</view>
+<view class="divLine2"></view>
+<view class='text1'>监控数据</view>
+<view class="divLine3"></view>
+<ec-canvas 
+  style='width: 400px; height: 400px;'
+  id="mychart-dom-scatter" 
+  canvas-id="mychart-scatter" 
+  ec="{{ ec }}" 
+  force-use-old-canvas="true"
+  ></ec-canvas>
+<!-- <canvas
+ style="width: 400px; height: 500px;"
+ canvas-id="yueEle2"
+ binderror="canvasIdErrorCallback"
+ bindtouchstart="yueTouchHandler2"
+></canvas> -->
+
+
+<view class="divLine4"></view>
+<view class='text2'>特征数据</view>
+<view class="divLine5"></view>
+<!-- <view class='featuredata1'>最大值：{{featuremax}}</view>
+<view class='featuredata2'>最小值：{{featuremin}}</view>
+<view class="divLine6"></view> -->
+
+<view class='history-table-wrap1'>
+    <view class="table">
+      <view class="tr">
+          <view class="th th4">特征</view>
+          <view class="th th5">数据</view>
+          <!-- <view class="th th3">ball</view> -->
+      </view>
+      <view class="tr" wx:for="{{feature_index}}" wx:for-index="index">
+          <view class="td td1">{{feature_index[index]}}</view>
+          <view class="td td2">{{feature_data[index]}}</view>
+          <!-- <view class="td td3" wx:if="{{data11[index][3]===1}}">ball</view>
+          <view class="td td3" wx:if="{{data11[index][3]===2}}">outer race</view>
+          <view class="td td3" wx:if="{{data11[index][3]===3}}">inner race</view>
+          <view class="td td4"  bindtap='gotoEventPage' data-index="{{index}}">详情</view> -->
+      </view>
+    </view>
+</view>
+
+
+
+<!-- <view class="divLine4"></view>
+<view class='text2'>特征数据</view>
+<view class="divLine5"></view>
+<view class='featuredata1'>最大值：{{featuremax}}</view>
+<view class='featuredata2'>最小值：{{featuremin}}</view>
+<view class="divLine6"></view> -->
+
+<view class="divLine8"></view>
+<view class='text3'>数据下载</view>
+<view class="divLine7"></view>
+<view class="text5">点击链接即可复制，打开浏览器粘贴即可下载数据</view>
+<view class='downloaddata1'>监控数据</view>
+<view class='text4' bindtap='textPaste1'>http://47.108.65.135:5100/keshe/api/v1/event/history/origin_data?event_index={{hao11}}</view>
+<view class='downloaddata2'>特征数据</view>
+<view class='text4' bindtap="textPaste2">http://47.108.65.135:5100/keshe/api/v1/event/history/feature_data?event_index={{hao11}}</view>
+</view>

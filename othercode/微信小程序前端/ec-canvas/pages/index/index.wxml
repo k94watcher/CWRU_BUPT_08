@@ -1,0 +1,28 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="image-parent">
+    <text class='text1'>Machine Learning</text>
+    <image class='image' mode='widthFix' src='../../images/logo.png'></image>
+  </view> 
+  <view class="divLine1"></view>
+  <view class = 'text2'>待处理事件</view>
+  <view class="divLine2"></view>
+  <view class='history-table-wrap'>
+    <view class="table">
+      <view class="tr">
+          <view class="th th1">设备序号</view>
+          <view class="th th2">时间段</view>
+          <view class="th th3">故障类型</view>
+          <view class="th th4">详情</view>
+      </view>
+      <view class="tr" wx:for="{{newlist}}" wx:for-index="index" data-item="{{data11[index][2]}}" data-id="{{data11[index][3]}}"data-hao="{{data11[index][0]}}">
+          <view class="td td1">{{data11[index][1]}}</view>
+          <view class="td td2">{{data11[index][2]}}</view>
+          <view class="td td3" wx:if="{{data11[index][3]===1}}">ball</view>
+          <view class="td td3" wx:if="{{data11[index][3]===2}}">outer race</view>
+          <view class="td td3" wx:if="{{data11[index][3]===3}}">inner race</view>
+          <view class="td td4"  bindtap='gotoEventPage' data-index="{{index}} "data-item="{{data11[index][2]}}"data-id="{{data11[index][3]}}" data-hao="{{data11[index][0]}}">详情</view>
+      </view>
+    </view>
+ </view>
+</view>

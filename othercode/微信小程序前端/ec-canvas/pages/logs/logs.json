@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "机组界面",
+  "usingComponents": {
+    "ec-canvas": "../../ec-canvas/ec-canvas"
+  }
+}

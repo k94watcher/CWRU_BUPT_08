@@ -1,0 +1,25 @@
+<!--pages/jizu/jizu.wxml-->
+<!-- <text>pages/jizu/jizu.wxml</text> -->
+<!--pages/机组/jizu.wxml-->
+<view class="container">
+<view class="text1">机组</view>
+<view class="divLine1"></view>
+ <view class='history-table-wrap'>
+    <view class="table">
+      <view class="tr">
+          <view class="th th1">设备号</view>
+          <view class="th th2">状态</view>
+          <view class="th th3">详情</view>
+      </view>
+      <view class="tr" wx:for="{{newlist}}"wx:key-index="index" data-id="{{data11[index][1]}}" data-hao="{{data11[index][2]}}">
+          <view class="td td1">"{{newlist[index][0]}}"</view>
+          <view class="td td2" wx:if="{{data11[index][1]===0}}">normal</view>
+          <view class="td td2" wx:if="{{data11[index][1]===1}}">ball</view>
+          <view class="td td2" wx:if="{{data11[index][1]===2}}">outer race</view>
+          <view class="td td2" wx:if="{{data11[index][1]===3}}">inner race</view>
+          <view class="td td3"  bindtap='gotoEventPage' data-index="{{index}}" data-id="{{data11[index][1]}}" data-hao="{{data11[index][2]}}">详情</view>
+      </view>
+    </view>
+ </view>
+
+</view>

@@ -1,0 +1,185 @@
+/* pages/test/test.wxss */
+.container{
+  width: 100%;
+  display: flex;
+
+}
+
+.title{
+  width: 100%;
+  height: 700px;  
+  text-align: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  font-style:oblique;
+  font-weight:bolder;
+  font-size:25px;
+  color:rgb(25, 0, 255)
+}
+
+.divLine1,.divLine2,.divLine3,.divLine4,.divLine5,.divLine6,.divLine7,.divLine8{
+ 
+ background: rgb(0, 0, 0);
+ width: 100%;
+ height: 5rpx;
+}
+
+.featuredata1{
+  width: 100%;
+  text-align: left;
+  font-weight:bolder;
+  font-size:20px;
+  color:rgb(0, 0, 0)
+}
+
+.featuredata2{
+  width: 100%;
+  text-align: left;
+  font-weight:bolder;
+  font-size:20px;
+  color:rgb(0, 0, 0)
+}
+
+.text1{
+  width: 100%;
+  text-align: center;
+   font-weight:bold;
+  font-size:20px;
+  color:rgb(0, 0, 0)
+}
+
+.text4{
+  width: 100%;
+  text-align: center;
+   font-weight:bold;
+  font-size:9px;
+  color:rgb(0, 0, 0)
+}
+
+.text3{
+  width: 100%;
+  text-align: center;
+  font-weight:bold;
+  font-size:20px;
+  color:rgb(0, 0, 0)
+}
+
+.downloaddata1{
+  width: 100%;
+  text-align: left;
+  font-weight: bold;
+  font-size: 15px;
+  color: rgb(255, 0, 0);
+}
+
+.downloaddata2{
+  width: 100%;
+  text-align: left;
+  font-weight: bold;
+  font-size: 15px;
+  color: rgb(255, 0, 0);
+}
+
+.text2{
+  width: 100%;
+  text-align: center;
+  font-weight:bold;
+  font-size:20px;
+  color:rgb(0, 0, 0)
+}
+
+.history-table-wrap{
+  position:relative;
+  width: 700rpx;
+  height: 300rpx;
+  left: 50%;
+  margin-left: -750rpx;
+  top: 10rpx;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.history-table-wrap1{
+  position:relative;
+  width: 700rpx;
+  height: 600rpx;
+  left: 50%;
+  margin-left: -750rpx;
+  top: 10rpx;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.history-table-wrap1{
+  position:relative;
+  width: 700rpx;
+  margin-bottom:100rpx;
+  margin-top:100rpx;
+  height: 600rpx;
+  left: 50%;
+  margin-left: -750rpx;
+  top: 0rpx;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+/* 表格代码   */
+.table{
+  border:1px solid #dadada;
+  border-right:0;
+  border-bottom: 10rpx;
+  width: 98%;
+  margin-left: 1%;
+}
+.tr{
+  width:100%;
+  display: flex;
+  justify-content: space-between;
+}
+.th,.td{
+  padding: 10px;
+  border-bottom: 1px solid #dadada;
+  border-right: 1px solid #dadada;
+  text-align: center;
+  width: 100%;
+}
+.th1,.th2,.th3,.th4,.th5,.td1,.td2{
+  width: 90%;
+}
+.th1,.th2,.th4,.th5{
+  font-weight: 800;
+  background-color: #000000;
+  font-size: 28rpx;
+  color: #ffffff;
+}
+
+.th3{
+  font-weight: 800;
+  background-color: #ff0000;
+  font-size: 28rpx;
+  color: #ffffff;
+}
+
+
+.td1,.td2{
+  font-size: 25rpx;
+  color: #000000;
+}
+
+.text5{
+  width: 100%;
+  text-align: left;
+  font-size:15px;
+  color:rgb(255, 0, 0)
+}
+
+.text6{
+  width: 100%;
+  text-align: center;
+  font-style: normal;
+  font-weight: bold;
+  font-size:20px;
+}
